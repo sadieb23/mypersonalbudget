@@ -19,7 +19,7 @@ function TokenExpiration() {
 
     if (decodedToken && decodedToken.exp) {
       const currentTime = Math.floor(Date.now() / 1000);
-      const warningThreshold = 30;
+      const warningThreshold = 10; // Reduced warning threshold to 10 seconds
       const timeUntilExpiration = decodedToken.exp - currentTime;
 
       if (timeUntilExpiration < warningThreshold) {
@@ -40,7 +40,7 @@ function TokenExpiration() {
       if (storedToken) {
         checkTokenExpired(storedToken);
       }
-    }, 30 * 1000);
+    }, 20 * 1000); // Changed interval duration to 20 seconds
 
     return () => {
       clearInterval(intervalId);
