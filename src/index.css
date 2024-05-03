@@ -436,7 +436,7 @@ select {
   content: "";
   position: absolute;
   inset: 0.55rem;
-  border: 2px dashed hsl(var(--text));
+  border: 2px solid hsl(var(--text));
   border-radius: calc(var(--round-lg) * 0.6);
   z-index: -1;
 }
