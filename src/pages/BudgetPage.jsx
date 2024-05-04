@@ -50,7 +50,7 @@ export async function budgetAction({ request }) {
         key: "expenses",
         id: values.expenseId,
       });
-      return toast.success("Expense deleted!");
+      return null;
     } catch (e) {
       throw new Error("There was a problem deleting your expense.");
     }
@@ -82,7 +82,6 @@ const BudgetPage = () => {
         key: "expenses",
         id: expenseId,
       });
-      toast.success("Expense deleted!");
       window.location.reload();
     } catch (e) {
       throw new Error("There was a problem deleting your expense.");
@@ -164,7 +163,7 @@ const BudgetPage = () => {
   return (
     <div className="grid-lg" >
       <h1 className="h2">
-        <span className="accent">{budget.name}</span> Overview
+        <span className="accent">{budget.name}</span> 
       </h1>
       <div className="flex-lg">
         <BudgetItem budget={budget} showDelete={true} />
@@ -176,7 +175,7 @@ const BudgetPage = () => {
       {expenses && expenses.length > 0 && (
         <div className="grid-md">
           <h2>
-            <span className="accent">{budget.name}</span> Expenses
+            <span className="accent">Expenses</span> 
           </h2>
           <Table
             expenses={expenses}
