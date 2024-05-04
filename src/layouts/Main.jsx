@@ -29,7 +29,6 @@ const Main = () => {
       <main>
         <Outlet />
       </main>
-      <img src={footer} alt="" />
     </div>
   )
 }
