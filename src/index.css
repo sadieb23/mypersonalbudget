@@ -239,18 +239,26 @@ p {
 }
 
 .grid-lg {
-  display: -ms-grid;
-  display: grid;
-  gap: var(--space-lg);
+  display: flex; /* Use flexbox for easier circular layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
   width: 100%;
+  height: 100%; /* Set height to make it a perfect circle */
+  border-radius: 50%; /* Make the container circular */
+  background-color: #ccc; /* Set a background color for visualization */
 }
 
-.grid-md {
-  display: -ms-grid;
-  display: grid;
-  gap: var(--space-md);
+
+.grid-sm {
+  display: flex; /* Use flexbox for easier circular layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
   width: 100%;
+  height: 100%; /* Set height to make it a perfect circle */
+  border-radius: 50%; /* Make the container circular */
+  background-color: #ccc; /* Set a background color for visualization */
 }
+
 
 .grid-sm {
   display: -ms-grid;
