@@ -16,7 +16,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
     <div
       className="budget"
       style={{
-       
+        "--accent": color,
       }}
     >
       <div className="progress-text">
