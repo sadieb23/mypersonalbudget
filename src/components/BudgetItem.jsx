@@ -16,7 +16,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
     <div
       className="budget"
       style={{
-        "--accent": color,
+        
       }}
     >
       <div className="progress-text">
@@ -53,7 +53,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
       ) : (
         <div className="flex-sm">
           <Link to={`/budget/${id}`} className="btn">
-            <span>View Charts</span>
+            <span>My Charts</span>
           </Link>
         </div>
       )}

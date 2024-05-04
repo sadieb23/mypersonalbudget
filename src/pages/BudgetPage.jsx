@@ -162,7 +162,7 @@ const BudgetPage = () => {
   }, [expenses]);
 
   return (
-    <div className="grid-lg" style={{ "--accent": budget.color }}>
+    <div className="grid-lg" >
       <h1 className="h2">
         <span className="accent">{budget.name}</span> Overview
       </h1>

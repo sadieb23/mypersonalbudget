@@ -28,7 +28,7 @@ svg {
   --lh-1-4: 1.4;
 
   /* colors */
-  --accent: pink;
+  --accent: 340, 100%, 50%; 
   --bkg: 100 60% 98%;
   --text: 185 26% 9%;
   --muted: 183 8% 55%;

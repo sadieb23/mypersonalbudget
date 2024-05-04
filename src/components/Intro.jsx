@@ -26,7 +26,7 @@ const Intro = () => {
             autoComplete="given-password"
           />
           <input type="hidden" name="_action" value="newUser" data-cy="newUserAction" />
-<button type="submit" className="btn btn--dark" data-cy="createAccountButton">
+<button type="submit" className="btn btn--light" data-cy="createAccountButton">
   <span>Create Account</span>
 </button>
 
@@ -49,7 +49,7 @@ const Intro = () => {
             autoComplete="given-password"
           />
           <input type="hidden" name="_action" value="oldUser" data-cy="newUserAction" />
-          <button type="submit" className="btn btn--dark " data-cy="loginButton" >
+          <button type="submit" className="btn btn--light " data-cy="loginButton" >
             <span>Log In</span>
           </button>
         </Form>

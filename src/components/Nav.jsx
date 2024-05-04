@@ -25,7 +25,7 @@ const Nav = ({ userName }) => {
               }
             }}
           >
-            <button type="submit" className="btn btn--warning">
+            <button type="submit" className="btn btn--pink">
               <span>Log Out</span>
             </button>
 

@@ -52,7 +52,7 @@ const AddExpenseForm = ({ budgets }) => {
           </div>
         </div>
         <div className="grid-xs" hidden={budgets.length === 1}>
-          <label htmlFor="newExpenseBudget">Budget Category</label>
+          <label htmlFor="newExpenseBudget">Which budget?</label>
           <select name="newExpenseBudget" id="newExpenseBudget" required>
             {
               budgets
@@ -68,7 +68,7 @@ const AddExpenseForm = ({ budgets }) => {
           </select>
         </div>
         <input type="hidden" name="_action" value="createExpense" />
-        <button type="submit" className="btn btn--dark" disabled={isSubmitting}>
+        <button type="submit" className="btn btn--pink" disabled={isSubmitting}>
           {
             isSubmitting ? <span>Submitting…</span> : (
               <>
