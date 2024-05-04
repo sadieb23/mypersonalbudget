@@ -16,7 +16,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
     <div
       className="budget"
       style={{
-        "--accent": color,
+       
       }}
     >
       <div className="progress-text">
@@ -28,7 +28,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
       </progress>
       <div className="progress-text">
         <small>{formatCurrency(spent)} spent</small>
-        <small>{formatCurrency(amount - spent)} remaining</small>
+        <small>{formatCurrency(amount - spent)} left</small>
       </div>
       {showDelete ? (
         <div className="flex-sm">
@@ -53,7 +53,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
       ) : (
         <div className="flex-sm">
           <Link to={`/budget/${id}`} className="btn">
-            <span>View Charts/Details</span>
+            <span>View Charts</span>
           </Link>
         </div>
       )}
