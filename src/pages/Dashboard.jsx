@@ -39,7 +39,7 @@ export async function dashboardAction({ request }) {
   if (_action === "newUser") {
     try {
       localStorage.setItem("userName", JSON.stringify(values.userName));
-      return toast.success(`Welcome, ${values.userName}`);
+      return null;
     } catch (e) {
       throw new Error("There was a problem creating your account.");
     }
@@ -48,7 +48,7 @@ export async function dashboardAction({ request }) {
   if (_action === "oldUser") {
     try {
       localStorage.setItem("userName", JSON.stringify(values.userName));
-      return toast.success(`Welcome back, ${values.userName}`);
+      return null;
     } catch (e) {
       throw new Error("There was a problem logging in your account.");
     }
@@ -60,7 +60,7 @@ export async function dashboardAction({ request }) {
         name: values.newBudget,
         amount: values.newBudgetAmount,
       });
-      return toast.success("Budget created!");
+      return null;
     } catch (e) {
       throw new Error("There was a problem creating your budget.");
     }
@@ -73,9 +73,9 @@ export async function dashboardAction({ request }) {
         amount: values.newExpenseAmount,
         budgetId: values.newExpenseBudget,
       });
-      return toast.success(`Expense ${values.newExpense} created!`);
+      return null;
     } catch (e) {
-      throw new Error("There was a problem creating your expense.");
+      throw new Error("There was a problem.");
     }
   }
 
@@ -85,9 +85,9 @@ export async function dashboardAction({ request }) {
         key: "expenses",
         id: values.expenseId,
       });
-      return toast.success("Expense deleted!");
+      return null;
     } catch (e) {
-      throw new Error("There was a problem deleting your expense.");
+      throw new Error("There was a problem.");
     }
   }
 }
@@ -99,9 +99,7 @@ const Dashboard = () => {
     <>
       {userName ? (
         <div className="dashboard">
-          <h1>
-            Hello there, <span className="accent">{userName}</span>
-          </h1>
+          
           <div className="grid-sm">
             {budgets && budgets.length > 0 ? (
               <div className="grid-lg">

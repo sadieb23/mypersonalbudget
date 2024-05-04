@@ -47,7 +47,6 @@ function TokenExpiration() {
     };
   }, [navigate]);
 
-  // This component doesn't need to return anything
   return null;
 }
 
