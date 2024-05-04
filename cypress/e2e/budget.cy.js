@@ -2,7 +2,7 @@
 //e2e test
 describe('page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173')
+    cy.visit('http://localhost:8080')
   })
 
   context("home page", () => {

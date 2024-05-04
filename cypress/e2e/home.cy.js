@@ -1,6 +1,6 @@
 context('Home', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173');
+    cy.visit('http://localhost:8080');
   });
 
   it('should have "Create a personal budget today!"', () => {
